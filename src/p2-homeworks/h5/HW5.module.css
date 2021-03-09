@@ -1,0 +1,135 @@
+.HW5Container {
+    position: relative;
+}
+
+.activeNavItem  {
+    padding: 2px 4px;
+    background: #5cc6cc;
+    border-radius: 4px;
+    border: 1px solid white;
+}
+
+.navContainer {
+}
+
+.navWrapper {
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    margin: 0 auto;
+    padding: 30px 10px;
+    min-width: 500px;
+    transform: translate(-50%, 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: rgba(63, 30 , 115, .6);
+    transition: all .5s ease;
+    backdrop-filter: blur(10px);
+    z-index: 9;
+    border: 1px solid red;
+}
+
+.navWrapper a {
+    position: relative;
+    margin-right: 35px;
+    font-weight: 600;
+    color: white;
+&:last-child {
+     margin-right: 0;
+ }
+&::before {
+     content: '';
+     position: absolute;
+     bottom: -2px;
+     width: 0;
+     height: 2px;
+     background-color: white;
+     transition: all .2s ease-in;
+     z-index: 1;
+ }
+&:hover::before {
+     width: 120%;
+     left: -5px;
+ }
+}
+.wrapper {
+    position: fixed;
+    top: 5px;
+    right: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 10;
+    /*border: 1px solid red;*/
+}
+
+
+
+.burgerMenuCommon {
+    position: absolute;
+    top: 9px;
+    left: -2px;
+    width: 25px;
+    height: 2px;
+    border-radius: 2px;
+    background: #5c46c6;
+&::before, &::after {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 2px;
+                border-radius: 2px;
+                background: #5c46c6;
+            }
+z-index: 10;
+
+}
+
+.burgerMenuClose {
+    display: inline-block;
+&::before {
+     top: -6px;
+     transition: all .2s ease;
+ }
+
+&::after {
+     top: 6px;
+     transition: all .2s ease;
+ }
+}
+.burgerMenuOpen {
+    background-color: transparent;
+&::before {
+     transform: rotate(45deg);
+     top: 0;
+     transition: all .2s ease;
+ }
+&::after {
+     transform: rotate(-45deg);
+     top: 0;
+     transition: all .2s ease;
+ }
+
+}
+
+error404 {
+
+    width: 100%;
+
+    height: 80vh;
+
+    background-image: url("https://cdn1.vectorstock.com/i/1000x1000/95/75/icon-graphic-error-404-girlfriend-not-found-vector-25659575.jpg");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: contain;
+
+
+
+}
